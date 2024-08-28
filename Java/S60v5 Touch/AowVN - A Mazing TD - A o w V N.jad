@@ -1,0 +1,11 @@
+MIDlet-1: AMazingTD,/images/icon.png,amazingtd.AMazingTDMidlet
+MIDlet-Description: AMazing tower defence game for Nokia 5800 XM.
+MIDlet-Jar-Size: 676009
+MIDlet-Jar-URL: AMazingTD.jar
+MIDlet-Name: AMazingTD
+MIDlet-Vendor: Johan Kruger
+MIDlet-Version: 0.98.97
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.1
+Nokia-MIDlet-App-Orientation: portrait
+Nokia-MIDlet-On-Screen-Keypad: no

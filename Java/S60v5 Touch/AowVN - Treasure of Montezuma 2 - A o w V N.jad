@@ -1,0 +1,12 @@
+Nokia-MIDlet-App-Orientation: landscape
+Nokia-MIDlet-On-Screen-Keypad: no
+MIDlet-1: Montezuma 2, /icons/icon.png, Gamelet
+MIDlet-Icon: /icons/icon.png
+MIDlet-Name: Montezuma 2
+MIDlet-Vendor: HeroCraft
+MIDlet-Version: 1.0.4
+MIDlet-Data-Size: 8192
+MIDlet-Info-URL: http://www.herocraft.com
+MIDlet-Install-Notify: http://get.herocraft.com/i/ugR27Y
+MIDlet-Jar-Size: 2006043
+MIDlet-Jar-URL: http://get.herocraft.com/d/ugR27Y/montezuma2.jar

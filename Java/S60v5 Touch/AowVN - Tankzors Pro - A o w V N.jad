@@ -1,0 +1,11 @@
+MIDlet-1: Tankzors Pro,/icon.png,tanksMidlet
+MIDlet-Info-URL: m.tankzors.com
+MIDlet-Jar-Size: 542422
+MIDlet-Jar-URL: tankzors_pro.jar
+MIDlet-Name: Tankzors Pro
+MIDlet-Permissions: javax.wireless.messaging.sms.send, javax.microedition.io.Connector.http, javax.microedition.io.Connector.sms
+MIDlet-Vendor: DaSuppaStudios Ltd.
+MIDlet-Version: 6.2.04
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+Nokia-Scalable-Icon-MIDlet-1: /icon_tank.svg
