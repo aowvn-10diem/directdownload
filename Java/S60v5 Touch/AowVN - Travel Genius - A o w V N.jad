@@ -1,0 +1,12 @@
+Nokia-MIDlet-On-Screen-Keypad: no
+Nokia-MIDlet-App-Orientation: portrait
+MIDlet-1: Travel Genius, icon.png, Main
+MIDlet-Icon: icon.png
+MIDlet-Name: Travel Genius
+MIDlet-Vendor: HeroCraft
+MIDlet-Version: 1.0.0
+MIDlet-Data-Size: 8192
+MIDlet-Info-URL: http://www.herocraft.com
+MIDlet-Install-Notify: http://get.herocraft.com/i/ykzyq5
+MIDlet-Jar-Size: 4231710
+MIDlet-Jar-URL: http://get.herocraft.com/d/ykzyq5/travelgenius.jar

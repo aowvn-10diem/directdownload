@@ -1,0 +1,33 @@
+MIDlet-1: Terror Attack, /i.png, TerrorAttackMIDlet
+MIDlet-Data-Size: 10240
+MIDlet-Icon: /i.png
+MIDlet-Install-Notify: http://www.indiagames.com
+MIDlet-Jar-Size: 2405454
+MIDlet-Jar-URL: terrorattack-lite_5800_en_v1_1_3.jar
+MIDlet-Name: Terror Attack
+MIDlet-Vendor: Indiagames Ltd.
+MIDlet-Version: 1.1.3
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+Nokia-MIDlet-App-Orientation: landscape
+Nokia-MIDlet-On-Screen-Keypad: no
+more_games_status: on
+more_games_url: http://lr.ovi.mobi/store/moregames
+IA-X-cmdExit: exit
+IA-X-cmdOK: ok
+IA-X-contentName: Indiagames_TerrorAttack_PG
+IA-X-disclaimerFlag: 1
+IA-X-disclaimerText: We are able to provide you a free, full version of this game thanks to the help of our sponsors, carefully selected to meet your preference.
+IA-X-disclaimerTitle: Information
+IA-X-errorInDisclaimerNotice: Oops... there is a problem with your network settings and the application will exit now.Please check the connectivity setting and try again.
+IA-X-firstURL: http://cd1.inner-active.com/Server-1.8X/ClientStart
+IA-X-getOfferingPageStr: ClientGetOffering
+IA-X-invertedFlag: non
+IA-X-languageFilePageStr: GetLanguageStringsFile
+IA-X-mediaPageStr: ClientMedia
+IA-X-offlineReportPageStr: ClientOfflineReport
+IA-X-portal: 551
+IA-X-socketPort: 82
+IA-X-socketSupport: 0
+IA-X-updateStatusPageStr: ClientUpdateStatus
+MIDlet-Permissions-Opt: javax.microedition.io.Connector.http,javax.microedition.io.Connector.socket, javax.microedition.pim.ContactList.read,javax.microedition.io.Connector.sms,javax.wireless.messaging.sms.send

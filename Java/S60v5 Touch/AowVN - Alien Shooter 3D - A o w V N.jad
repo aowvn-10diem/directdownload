@@ -1,0 +1,13 @@
+MIDlet-Jar-Size: 1211084
+MIDlet-Jar-URL: alienshooter3d_nokia_5800.jar
+Manifest-Version: 1.0
+Nokia-MIDlet-On-Screen-Keypad: no
+MicroEdition-Configuration: CLDC-1.0
+MIDlet-Name: Alien Shooter 3D
+MIDlet-Icon: /icons/ico.png
+MIDlet-Vendor: NET Lizard
+MIDlet-1: Alien Shooter 3D, /icons/ico.png, NET_Lizard
+Nokia-MIDlet-App-Orientation: portrait
+MIDlet-Version: 2.0
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Install-Notify: http://www.glowingmobile.com/pub/notify.php?a=alien_shooter_3d_touchscreen&c=3

@@ -1,0 +1,12 @@
+Nokia-MIDlet-App-Orientation: portrait
+Nokia-MIDlet-On-Screen-Keypad: no
+MIDlet-1: Yumsters, icon.png, Main
+MIDlet-Icon: icon.png
+MIDlet-Name: Yumsters
+MIDlet-Vendor: HeroCraft
+MIDlet-Version: 1.0.0
+MIDlet-Data-Size: 8192
+MIDlet-Info-URL: http://www.herocraft.com
+MIDlet-Install-Notify: http://get.herocraft.com/i/qmmlVr
+MIDlet-Jar-Size: 3336652
+MIDlet-Jar-URL: http://get.herocraft.com/d/qmmlVr/yumsters.jar
