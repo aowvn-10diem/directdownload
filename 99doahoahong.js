@@ -23,6 +23,15 @@
     var randomImage = images[Math.floor(Math.random() * images.length)];
     var randomLink = links[Math.floor(Math.random() * links.length)];
 
+    // Kiểm tra nếu người dùng đã nhấn vào quảng cáo trong 15 phút qua
+    var adClickedTime = localStorage.getItem('adClickedTime');
+    var now = new Date().getTime();
+
+    if (adClickedTime && now - adClickedTime < 15 * 60 * 1000) {
+        // Nếu người dùng đã nhấn và chưa hết 15 phút, không hiển thị quảng cáo
+        return;
+    }
+
     // Tạo phần tử chứa quảng cáo
     var adContainer = document.createElement('div');
     adContainer.style.position = 'fixed';
@@ -70,6 +79,7 @@
     adImage.onclick = function() {
         window.open(randomLink, '_blank');
         adContainer.style.display = 'none'; // Ẩn quảng cáo
+        localStorage.setItem('adClickedTime', new Date().getTime()); // Lưu thời gian nhấn vào quảng cáo
         setTimeout(function() {
             adContainer.style.display = 'block'; // Hiển thị lại sau 15 phút
         }, 15 * 60 * 1000); // 15 phút
