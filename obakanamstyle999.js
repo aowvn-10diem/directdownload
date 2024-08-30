@@ -73,7 +73,7 @@
 
     // Tạo thông báo
     var adText = document.createElement('p');
-    adText.innerHTML = 'Nhấn vào hình ảnh để ủng hộ AowVN ra game nha bạn yêu';
+    adText.innerHTML = 'nhấn nhào nhình nhảnh nhể nhủng nhộ nhúng nhình nha';
     adText.style.fontSize = '16px';
     adText.style.color = '#555';
     adText.style.margin = '0';
