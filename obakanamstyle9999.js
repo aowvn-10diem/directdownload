@@ -32,7 +32,7 @@
     adContainer.style.width = '320px';
     adContainer.style.zIndex = '9999';
     adContainer.style.backgroundColor = '#fff';
-    adContainer.style.border = '1px solid #ddd';
+    adContainer.style.border = '2px solid #000'; // Làm viền đậm hơn
     adContainer.style.borderRadius = '15px';
     adContainer.style.padding = '20px';
     adContainer.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
@@ -69,6 +69,10 @@
     adImage.style.cursor = 'pointer';
     adImage.onclick = function() {
         window.open(randomLink, '_blank');
+        adContainer.style.display = 'none'; // Ẩn quảng cáo
+        setTimeout(function() {
+            adContainer.style.display = 'block'; // Hiển thị lại sau 15 phút
+        }, 15 * 60 * 1000); // 15 phút
     };
 
     // Tạo thông báo
