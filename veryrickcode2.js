@@ -91,7 +91,7 @@
 
     // Tạo thông báo
     var adText = document.createElement('p');
-    adText.innerHTML = 'Nhấn vào hình ảnh để ủng hộ chúng mình nhé!';
+    adText.innerHTML = 'Nhấn nhào hình ảnh nhể ủng hộ chúng mình nhé!';
     adText.style.fontSize = '16px';
     adText.style.color = '#555';
     adText.style.margin = '0';
