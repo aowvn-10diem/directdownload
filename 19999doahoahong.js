@@ -29,32 +29,32 @@
     var randomImage = images[Math.floor(Math.random() * images.length)];
     var randomLink = links[Math.floor(Math.random() * links.length)];
 
-    // Kiểm tra nếu người dùng đã nhấn vào quảng cáo trong 5 phút qua
-    var adClickedTime = localStorage.getItem('adClickedTime');
+    // Kiểm tra nếu người dùng đã nhấn vào hình ảnh trong 5 phút qua
+    var clickedTime = localStorage.getItem('clickedTime');
     var now = new Date().getTime();
 
-    if (adClickedTime && now - adClickedTime < 5 * 60 * 1000) {
-        // Nếu người dùng đã nhấn và chưa hết 5 phút, không hiển thị quảng cáo
+    if (clickedTime && now - clickedTime < 5 * 60 * 1000) {
+        // Nếu người dùng đã nhấn và chưa hết 5 phút, không hiển thị nội dung
         return;
     }
 
-    // Tạo phần tử chứa quảng cáo
-    var adContainer = document.createElement('div');
-    adContainer.style.position = 'fixed';
-    adContainer.style.top = '50%';
-    adContainer.style.left = '50%';
-    adContainer.style.transform = 'translate(-50%, -50%)';
-    adContainer.style.width = '320px';
-    adContainer.style.zIndex = '9999';
-    adContainer.style.backgroundColor = '#fff';
-    adContainer.style.border = '2px solid #000';
-    adContainer.style.borderRadius = '15px';
-    adContainer.style.padding = '20px';
-    adContainer.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
-    adContainer.style.textAlign = 'center';
-    adContainer.style.fontFamily = 'Arial, sans-serif';
+    // Tạo phần tử hiển thị
+    var displayContainer = document.createElement('div');
+    displayContainer.style.position = 'fixed';
+    displayContainer.style.top = '50%';
+    displayContainer.style.left = '50%';
+    displayContainer.style.transform = 'translate(-50%, -50%)';
+    displayContainer.style.width = '320px';
+    displayContainer.style.zIndex = '9999';
+    displayContainer.style.backgroundColor = '#fff';
+    displayContainer.style.border = '2px solid #000';
+    displayContainer.style.borderRadius = '15px';
+    displayContainer.style.padding = '20px';
+    displayContainer.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+    displayContainer.style.textAlign = 'center';
+    displayContainer.style.fontFamily = 'Arial, sans-serif';
 
-    // Tạo nút đóng quảng cáo
+    // Tạo nút đóng
     var closeButton = document.createElement('span');
     closeButton.innerHTML = '&times;';
     closeButton.style.position = 'absolute';
@@ -71,45 +71,45 @@
         closeButton.style.color = '#888';
     };
     closeButton.onclick = function() {
-        adContainer.style.display = 'none';
-        localStorage.setItem('adClickedTime', new Date().getTime()); // Lưu thời gian nhấn vào nút X
+        displayContainer.style.display = 'none';
+        localStorage.setItem('clickedTime', new Date().getTime()); // Lưu thời gian nhấn vào nút X
     };
 
-    // Tạo hình ảnh quảng cáo
-    var adImage = document.createElement('img');
-    adImage.src = randomImage;
-    adImage.style.width = '100%';
-    adImage.style.borderRadius = '10px';
-    adImage.style.marginBottom = '15px';
-    adImage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-    adImage.style.cursor = 'pointer';
-    adImage.onclick = function() {
+    // Tạo hình ảnh
+    var displayImage = document.createElement('img');
+    displayImage.src = randomImage;
+    displayImage.style.width = '100%';
+    displayImage.style.borderRadius = '10px';
+    displayImage.style.marginBottom = '15px';
+    displayImage.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    displayImage.style.cursor = 'pointer';
+    displayImage.onclick = function() {
         openLinkInNewTab(randomLink);
-        adContainer.style.display = 'none'; // Ẩn quảng cáo
+        displayContainer.style.display = 'none'; // Ẩn nội dung
     };
 
     // Tạo thông báo
-    var adText = document.createElement('p');
-    adText.innerHTML = 'Nhấn nhào hình ảnh nhể ủng hộ chúng mình nhé!';
-    adText.style.fontSize = '16px';
-    adText.style.color = '#555';
-    adText.style.margin = '0';
-    adText.style.marginBottom = '15px';
+    var displayText = document.createElement('p');
+    displayText.innerHTML = 'Nhấn vào hình ảnh để xem thêm chi tiết!';
+    displayText.style.fontSize = '16px';
+    displayText.style.color = '#555';
+    displayText.style.margin = '0';
+    displayText.style.marginBottom = '15px';
 
     // Gắn các phần tử vào container
-    adContainer.appendChild(closeButton);
-    adContainer.appendChild(adImage);
-    adContainer.appendChild(adText);
+    displayContainer.appendChild(closeButton);
+    displayContainer.appendChild(displayImage);
+    displayContainer.appendChild(displayText);
 
     // Thêm container vào trang
-    document.body.appendChild(adContainer);
+    document.body.appendChild(displayContainer);
 
-    // Xử lý khi người dùng nhấn bên ngoài quảng cáo
+    // Xử lý khi người dùng nhấn bên ngoài container
     document.addEventListener('click', function(event) {
-        if (!adContainer.contains(event.target)) {
-            if (adContainer.style.display !== 'none') {
+        if (!displayContainer.contains(event.target)) {
+            if (displayContainer.style.display !== 'none') {
                 openLinkInNewTab(randomLink);
-                adContainer.style.display = 'none'; // Ẩn quảng cáo khi nhấn ra ngoài
+                displayContainer.style.display = 'none'; // Ẩn nội dung khi nhấn ra ngoài
             }
         }
     });
