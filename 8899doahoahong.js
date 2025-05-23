@@ -38,7 +38,7 @@ class BannerPopup {
           left: 50%;
           transform: translate(-50%, -50%);
           z-index: 999999;
-          max-width: 90vw;
+          max-width: 95vw;
           opacity: 0;
           will-change: transform, opacity;
           transition: opacity 0.3s ease-out, transform 0.3s ease-out;
@@ -63,6 +63,7 @@ class BannerPopup {
           );
           background-size: 800% 100%;
           transition: transform 0.3s ease;
+          width: 100%;
         }
 
         #banner-wrapper:hover {
@@ -72,7 +73,7 @@ class BannerPopup {
 
         #banner-image {
           display: block;
-          max-width: 100%;
+          width: 100%;
           height: auto;
           border-radius: 8px;
           box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -105,6 +106,29 @@ class BannerPopup {
         @keyframes rainbow {
           0% { background-position: 0% 50%; }
           100% { background-position: 800% 50%; }
+        }
+
+        @media screen and (max-width: 768px) {
+          #banner-popup {
+            max-width: 98vw;
+          }
+          
+          #banner-wrapper {
+            padding: 3px;
+            border-radius: 8px;
+          }
+          
+          #banner-image {
+            border-radius: 6px;
+          }
+          
+          #banner-close {
+            top: -12px;
+            right: -12px;
+            width: 26px;
+            height: 26px;
+            font-size: 18px;
+          }
         }
       `;
 
@@ -199,13 +223,13 @@ class BannerPopup {
         this.container.classList.remove('fade-out');
       }, this.config.fadeOutDuration);
     }
-  }
+}
 
-  // Khởi tạo banner
-  document.addEventListener('DOMContentLoaded', () => {
-    try {
-      window.bannerPopup = new BannerPopup();
-    } catch (error) {
-      console.error('Failed to initialize banner:', error);
-    }
-  });
+// Khởi tạo banner
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    window.bannerPopup = new BannerPopup();
+  } catch (error) {
+    console.error('Failed to initialize banner:', error);
+  }
+});
